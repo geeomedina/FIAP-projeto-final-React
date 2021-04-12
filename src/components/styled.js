@@ -87,3 +87,100 @@ export const NavOptions = styled.a`
 export const NavDiv = styled.div`
   margin: auto;
 `
+
+// About
+export const AboutDiv = styled.div`
+  text-align: center;
+  padding: 60px 0;
+`
+
+export const AboutDescription = styled.div`
+  margin-bottom: 20px;
+`
+
+export const AboutFooter = styled.div`
+  margin-top: 20px;
+`
+
+// Home
+export const HomeDiv = styled.div`
+  padding: 60px 30px;
+  height: 100%;
+`
+
+export const HomeContainer = styled.div`
+  margin: 0 auto;
+  max-width: 1024px;
+`
+
+export const HomeSecondContainer = styled.div`
+  display: flex;
+  margin-bottom: 30px;
+  margin: 0 auto;
+  max-width: 1024px;
+`
+
+export const HomeDescription = styled.div`
+  text-align: start;
+  width: 50%;
+`
+
+export const NewButton = styled.div`
+  width: 50%;
+  text-align: end;
+`
+
+export const ActionColumn = styled.td`
+  display: flex;
+`
+
+export const ActionButton = styled.img`
+  width: 30px;
+  padding-right: 10px;
+  cursor: pointer;
+`
+
+export const HomeTable = styled.table`
+  width: 100%;
+  margin-bottom: 1rem;
+  border-collapse: collapse;
+`
+
+export const SimpleTH = styled.th`
+  padding: .75rem;
+  vertical-align: bottom;
+  border-bottom: 2px solid #a1a4a7;
+  text-align: center;
+  display: table-cell;
+  vertical-align: inherit;
+  font-weight: bold;
+`
+
+export const SimpleTD = styled.td`
+  padding: .75rem;
+  display: table-cell;
+`
+
+// Login
+export const LoginDiv = styled.div`
+  padding: 60px 0;
+  height: 100%;
+`
+
+export const LoginForm = styled.div`
+  margin: 0 auto;
+  max-width: 320px;
+  padding: 10px;
+`
+
+// SignUp
+export const SignUpDiv = styled.div`
+  padding: 60px 0;
+  height: 100%;
+`
+
+export const SignUpForm = styled.div`
+  margin: 0 auto;
+  max-width: 320px;
+  padding: 10px;
+`

@@ -9,9 +9,10 @@ import {
   ErrorLabel,
   FormGroup,
   FormInput,
-  SubmitButton 
+  SubmitButton,
+  LoginDiv,
+  LoginForm
 } from "./styled";
-import "./Login.css";
 
 function Login({history}) {
 
@@ -43,9 +44,9 @@ function Login({history}) {
     }
 
     return (
-        <div className="login">
+        <LoginDiv>
           <Title>To Do List</Title>
-          <form className="login__form" onSubmit={handleSubmit}>
+          <LoginForm onSubmit={handleSubmit}>
             <FormGroup id="email">
               <FormInput
                 autoFocus
@@ -75,8 +76,8 @@ function Login({history}) {
                 Cadastre-se
               </Link>
             </p>
-          </form>
-        </div>
+          </LoginForm>
+        </LoginDiv>
     );
 }
 export default Login;

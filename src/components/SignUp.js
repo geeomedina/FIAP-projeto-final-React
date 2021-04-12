@@ -4,12 +4,13 @@ import { Link, Redirect } from "react-router-dom";
 import firebaseService from '../services/firebase.service'
 import { LoginContext } from "../providers/LoginProvider"
 
-import "./SignUp.css";
 import { 
   Title,
   FormGroup,
   FormInput,
-  SubmitButton 
+  SubmitButton, 
+  SignUpDiv,
+  SignUpForm
 } from "./styled";
 
 function SignUp({history}) {
@@ -40,10 +41,10 @@ function SignUp({history}) {
     }
 
     return (
-      <div className="signup">
+      <SignUpDiv>
         <Title>To Do List</Title>
         <h3>Cadastre-se</h3>
-        <form className="signup__form" onSubmit={handleSubmit}>
+        <SignUpForm onSubmit={handleSubmit}>
           <FormGroup id="email">
             <FormInput
               autoFocus
@@ -71,8 +72,8 @@ function SignUp({history}) {
             </Link>
             <br />
           </p>
-        </form>
-      </div>
+        </SignUpForm>
+      </SignUpDiv>
     );
 }
 export default SignUp;

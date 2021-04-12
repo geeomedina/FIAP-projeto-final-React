@@ -8,9 +8,18 @@ import icon_delete from "../assets/icon_trash.png";
 import { 
   Title, 
   CancelButton,
-  Button 
+  Button, 
+  HomeDiv,
+  HomeContainer,
+  HomeSecondContainer,
+  HomeDescription,
+  NewButton,
+  ActionColumn,
+  ActionButton,
+  HomeTable,
+  SimpleTH,
+  SimpleTD
 } from './styled';
-import './Home.css';
 
 function Home() {
 
@@ -48,17 +57,18 @@ function Home() {
   }
 
   return (
-    <div className="home">
+    <HomeDiv>
       <Title>To Do List</Title>
-      <div className="home__content-div home__container">
-        <div className="home__description">
+      <HomeSecondContainer>
+        <HomeDescription>
           <span>Gerencie suas tarefas ou anotações.</span>
-        </div>
-        <div className="home__new-button">
+        </HomeDescription>
+        <NewButton>
           <Button onClick={() => newItem()}>Nova Tarefa</Button>
-        </div>
-      </div>
-      <div className="home__container">
+        </NewButton>
+      </HomeSecondContainer>
+
+      <HomeContainer>
         <Modal 
           isOpen={openModal}
           ariaHideApp={false}
@@ -80,33 +90,33 @@ function Home() {
           <ModalForm content={selected}></ModalForm>
           <CancelButton onClick={() => setOpenModal(false)}>Cancelar</CancelButton>
         </Modal>
-        <table>
+        <HomeTable>
           <thead>
             <tr>
-              <th>Título</th>
-              <th>Descrição</th>
-              <th></th>
+              <SimpleTH>Título</SimpleTH>
+              <SimpleTH>Descrição</SimpleTH>
+              <SimpleTH></SimpleTH>
             </tr>
           </thead>
           <tbody>
             { list && list.map((item, index) =>
               <tr key={ index }>
-                <td>{ item.title }</td>
-                <td>{ item.description }</td>
-                <td className="home__action-column">
+                <SimpleTD>{ item.title }</SimpleTD>
+                <SimpleTD>{ item.description }</SimpleTD>
+                <ActionColumn>
                   <div onClick={() => editItem(item)} title="Editar">
-                    <img className="home__action-button" src={icon_edit} alt="Editar" />
+                    <ActionButton src={icon_edit} alt="Editar" />
                   </div>
                   <div onClick={() => deleteItem(item)} title="Deletar">
-                    <img className="home__action-button" src={icon_delete} alt="Deletar" />
+                    <ActionButton src={icon_delete} alt="Deletar" />
                   </div>
-                </td>
+                </ActionColumn>
               </tr>
             )}
           </tbody>
-        </table>
-      </div>
-    </div>
+        </HomeTable>
+      </HomeContainer>
+    </HomeDiv>
   );
 }
   
