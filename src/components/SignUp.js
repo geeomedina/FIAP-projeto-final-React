@@ -44,7 +44,7 @@ function SignUp({history}) {
         <Title>To Do List</Title>
         <h3>Cadastre-se</h3>
         <form className="signup__form" onSubmit={handleSubmit}>
-          <FormGroup controlId="email">
+          <FormGroup id="email">
             <FormInput
               autoFocus
               type="email"
@@ -53,7 +53,7 @@ function SignUp({history}) {
               onChange={(e) => setEmail(e.target.value)}
             />
           </FormGroup>
-          <FormGroup controlId="password">
+          <FormGroup id="password">
             <FormInput
               type="password"
               value={password}

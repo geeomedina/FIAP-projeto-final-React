@@ -42,7 +42,6 @@ function ModalForm({content}) {
   };
   
   function validateForm() {
-    console.log(title.length > 0 && description.length > 0);
     return title.length > 0 && description.length > 0;
   }
 
@@ -55,7 +54,7 @@ function ModalForm({content}) {
         <ModalTitle>Editar Item</ModalTitle>
       }
       <form>
-        <FormGroup size="lg" controlId="title">
+        <FormGroup id="title">
           <FormInput
               autoFocus
               type="text"
@@ -64,7 +63,7 @@ function ModalForm({content}) {
               onChange={(e) => setTitle(e.target.value)}
           />
         </FormGroup>
-        <FormGroup size="lg" controlId="description">
+        <FormGroup id="description">
           <FormInput
               type="text"
               value={description}

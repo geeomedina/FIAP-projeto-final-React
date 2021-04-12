@@ -32,3 +32,29 @@
   padding-right: 10px;
   cursor: pointer;
 }
+
+table {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: .75rem;
+}
+
+table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #a1a4a7;
+}
+
+th {
+  text-align: center;
+  display: table-cell;
+  vertical-align: inherit;
+  font-weight: bold;
+}
+
+td {
+  display: table-cell;
+}

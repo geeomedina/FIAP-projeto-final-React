@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import firebaseService from '../services/firebase.service';
-import { Table } from 'react-bootstrap';
 import Modal from "react-modal";
 import ModalForm from './ModalForm';
 
@@ -81,7 +80,7 @@ function Home() {
           <ModalForm content={selected}></ModalForm>
           <CancelButton onClick={() => setOpenModal(false)}>Cancelar</CancelButton>
         </Modal>
-        <Table responsive>
+        <table>
           <thead>
             <tr>
               <th>Título</th>
@@ -105,7 +104,7 @@ function Home() {
               </tr>
             )}
           </tbody>
-        </Table>
+        </table>
       </div>
     </div>
   );

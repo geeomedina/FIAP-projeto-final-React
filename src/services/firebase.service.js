@@ -9,7 +9,6 @@ const db = store.collection('items');
 export default {
     createUser: async (email, password) => {
         auth.createUserWithEmailAndPassword(email, password).then((u) => {
-            console.log(u)
         }).catch(error => {
             alert(`${error}`);
         });

@@ -24,7 +24,6 @@ function Login({history}) {
     const signInHandler = async (event, email, password) => {
       event.preventDefault();
       auth.signInWithEmailAndPassword(email, password).then((result) => {
-          console.log(result.user)
           history.push("/");
       }).catch(error => {
           setError(true);
@@ -47,7 +46,7 @@ function Login({history}) {
         <div className="login">
           <Title>To Do List</Title>
           <form className="login__form" onSubmit={handleSubmit}>
-            <FormGroup size="lg" controlId="email">
+            <FormGroup id="email">
               <FormInput
                 autoFocus
                 type="email"
@@ -56,7 +55,7 @@ function Login({history}) {
                 onChange={(e) => setEmail(e.target.value)}
               />
             </FormGroup>
-            <FormGroup size="lg" controlId="password">
+            <FormGroup id="password">
               <FormInput
                 type="password"
                 value={password}
